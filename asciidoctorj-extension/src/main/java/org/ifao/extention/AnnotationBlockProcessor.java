@@ -1,5 +1,7 @@
 package org.ifao.extention;
 
+import net.ifao.annotation.searcher.AnnotationSearcher;
+import net.ifao.annotation.searcher.spring.SpringAnnotationSearcherProvider;
 import org.asciidoctor.ast.AbstractBlock;
 import org.asciidoctor.extension.BlockProcessor;
 import org.asciidoctor.extension.Reader;
@@ -19,6 +21,8 @@ public class AnnotationBlockProcessor extends BlockProcessor {
 
     @Override
     public Object process(AbstractBlock parent, Reader reader, Map<String, Object> attributes) {
+        AnnotationSearcher appAnnotationSearcher = SpringAnnotationSearcherProvider.getAnnotationSearcherProvider();
+
         List<String> lines = reader.readLines();
         String upperLines = null;
         for (String line : lines) {

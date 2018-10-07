@@ -1,6 +1,6 @@
 package net.ifao.asciidoc.test;
 
-import net.ifao.annotation.searcher.searcher.AnnotationSearcher;
+import net.ifao.annotation.searcher.AnnotationSearcher;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,9 @@ import org.springframework.util.ResourceUtils;
 import java.io.*;
 import java.net.URL;
 
+/**
+ * This is tests which is found all classes with concrete annotation and write them to {@link OutputStream}
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {Config.class})
 public class SpringContectTest {

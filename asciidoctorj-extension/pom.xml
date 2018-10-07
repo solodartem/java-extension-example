@@ -21,6 +21,11 @@
             <artifactId>asciidoctorj</artifactId>
             <version>${asciidoctorj.version}</version>
         </dependency>
+        <dependency>
+            <groupId>annotation-searcher</groupId>
+            <artifactId>annotation-searcher</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <defaultGoal>compile</defaultGoal>

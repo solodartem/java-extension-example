@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>annotation-searcher</module>
         <module>asciidoctorj-extension</module>
         <module>asciidoctor-with-extension-example</module>
     </modules>
