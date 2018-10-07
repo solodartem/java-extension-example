@@ -5,10 +5,6 @@
     <groupId>org.asciidoctor.maven</groupId>
     <artifactId>asciidoctor-with-extension-example</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>AsciiDoc to HTML with extension Maven Example</name>
-    <description>An example project that demonstrates how to convert AsciiDoc to HTML5 using the Asciidoctor Maven
-        plugin with the twitter extension.
-    </description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,6 +14,14 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.asciidoctor.maven</groupId>
+            <artifactId>asciidoctorj-extension</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <defaultGoal>process-resources</defaultGoal>
@@ -30,7 +34,7 @@
                     <!-- Add the twitter extension for AsciidoctorJ -->
                     <dependency>
                         <groupId>org.asciidoctor.maven</groupId>
-                        <artifactId>asciidoctorj-twitter-extension</artifactId>
+                        <artifactId>asciidoctorj-extension</artifactId>
                         <version>1.0.0-SNAPSHOT</version>
                     </dependency>
                     <!-- Comment this section to use the default jruby artifact provided by the plugin -->
